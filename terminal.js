@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="mono text-xs text-zinc-500">2024</div>
         <div>
           <h3 class="font-medium text-zinc-900 mb-1">Academies: TIS GRUPA & Interkapital</h3>
-          <p class="text-sm text-zinc-600 leading-relaxed">Did a couple of academies in 2024 to break into development work and check out other areas. In the summer at TIS, I focused on Java/Spring server-side development, finishing with a backend hackathon project. Earlier in the spring at Interkapital, I wanted to see what other fields could be interesting to me as a computer science student.  Apart from the basic economy stuff, I liked using Bloomberg Terminals, building DCF valuations, and analyzing financial data for investment opportunities.</p>
+          <p class="text-sm text-zinc-600 leading-relaxed">Did a couple of academies in 2024 to break into development work and check out other areas. In the summer at TIS, I focused on Java/Spring server-side development, finishing with a backend hackathon project. Earlier in the spring at Interkapital, I wanted to see what other fields could be interesting to me as a computer science student. Apart from the basic economy stuff, I liked using Bloomberg Terminals, building DCF valuations, and analyzing financial data for investment opportunities.</p>
         </div>
       </div>
       <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
@@ -102,12 +102,93 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `,
     'projects.md': `
-      <div class="border-t border-zinc-200 py-4 text-sm text-zinc-500 italic">
-        // Projects parsing from GitHub... Please check back later or visit
-        <a href="https://github.com/evucelic" target="_blank" rel="noopener noreferrer" class="text-zinc-800 border-b border-zinc-400 hover:text-blue-600 hover:border-blue-600 transition-colors">github.com/evucelic</a>
+      <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
+        <div class="mono text-xs text-zinc-500">2025 —<br>present</div>
+        <div>
+          <h3 class="font-medium text-zinc-900 mb-1">
+            Diplomski Projekt
+            <a href="https://github.com/evucelic/Diplomski-Projekt" target="_blank" rel="noopener noreferrer" class="ml-2 mono text-xs font-normal text-zinc-400 border-b border-zinc-300 hover:text-zinc-700 hover:border-zinc-700 transition-colors">↗ github</a>
+          </h3>
+          <p class="text-sm text-zinc-600 leading-relaxed">My Master's project. I'm building a deep learning model that combines VAEs and hidden Markov models to generate synthetic financial data that actually behaves like the real thing - useful for stress testing.</p>
+          <div class="mono text-xs text-zinc-400 mt-2">PyTorch · HMM · VAE · Jupyter</div>
+        </div>
+      </div>
+      <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
+        <div class="mono text-xs text-zinc-500">2025</div>
+        <div>
+          <h3 class="font-medium text-zinc-900 mb-1">
+            HMM Market Regime Estimation
+            <a href="https://github.com/evucelic/HMM-Market-Regime-Estimation" target="_blank" rel="noopener noreferrer" class="ml-2 mono text-xs font-normal text-zinc-400 border-b border-zinc-300 hover:text-zinc-700 hover:border-zinc-700 transition-colors">↗ github</a>
+          </h3>
+          <p class="text-sm text-zinc-600 leading-relaxed">My Bachelor's thesis. Used hidden Markov models to estimate market regimes (bull, bear, sideways) from financial time series. The goal was to see if regime-aware strategies outperform naive ones.</p>
+          <div class="mono text-xs text-zinc-400 mt-2">Python · HMM · Jupyter · Time Series</div>
+        </div>
+      </div>
+      <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
+        <div class="mono text-xs text-zinc-500">2025</div>
+        <div>
+            <h3 class="font-medium text-zinc-900 mb-1">
+            FaksFit
+            <a href="https://github.com/evucelic/FaksFit" target="_blank" rel="noopener noreferrer" class="ml-2 mono text-xs font-normal text-zinc-400 border-b border-zinc-300 hover:text-zinc-700 hover:border-zinc-700 transition-colors">↗ github</a>
+            </h3>
+            <p class="text-sm text-zinc-600 leading-relaxed">A team project from my Software Engineering course at FER. FaksFit is a full-stack web app that makes it easier for students to manage their PE (physical education) course requirements - booking slots, tracking points, and seeing what's left to pass. I handled the backend, database design, and deployment.</p>
+            <div class="mono text-xs text-zinc-400 mt-2">Spring Boot · React · Java · PostgreSQL · Docker · Render</div>
+        </div>
+        </div>
+      <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
+        <div class="mono text-xs text-zinc-500">2025</div>
+        <div>
+          <h3 class="font-medium text-zinc-900 mb-1">
+            Early Predictors for Student Success
+            <a href="https://github.com/evucelic/Early-Predictors-For-Success" target="_blank" rel="noopener noreferrer" class="ml-2 mono text-xs font-normal text-zinc-400 border-b border-zinc-300 hover:text-zinc-700 hover:border-zinc-700 transition-colors">↗ github</a>
+          </h3>
+          <p class="text-sm text-zinc-600 leading-relaxed">A replication and reinterpretation of an academic paper on predicting student success from behavioural and demographic indicators. Rebuilt the methodology, tested different models, and compared results against the original findings.</p>
+          <div class="mono text-xs text-zinc-400 mt-2">Python · Scikit-learn · Jupyter · ML</div>
+        </div>
+      </div>
+      <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
+        <div class="mono text-xs text-zinc-500">2024 —<br>2025</div>
+        <div>
+          <h3 class="font-medium text-zinc-900 mb-1">
+            EQ Performance Backtesting
+            <a href="https://github.com/evucelic/EQ-Performance-Backtesting" target="_blank" rel="noopener noreferrer" class="ml-2 mono text-xs font-normal text-zinc-400 border-b border-zinc-300 hover:text-zinc-700 hover:border-zinc-700 transition-colors">↗ github</a>
+          </h3>
+          <p class="text-sm text-zinc-600 leading-relaxed">Backtested an equilibrium model from modern portfolio theory (the Black-Litterman approach) on historical US stock data.</p>
+          <div class="mono text-xs text-zinc-400 mt-2">Python · Pandas · NumPy · Jupyter</div>
+        </div>
+      </div>
+      <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
+        <div class="mono text-xs text-zinc-500">2024</div>
+        <div>
+          <h3 class="font-medium text-zinc-900 mb-1">
+            Music & Mental Health Analysis
+            <a href="https://github.com/evucelic/Music-Mental-Health-Analysis" target="_blank" rel="noopener noreferrer" class="ml-2 mono text-xs font-normal text-zinc-400 border-b border-zinc-300 hover:text-zinc-700 hover:border-zinc-700 transition-colors">↗ github</a>
+          </h3>
+          <p class="text-sm text-zinc-600 leading-relaxed">A statistical analysis in R exploring whether music preferences correlate with mental health outcomes. Done as a university project - more exploratory than conclusive, but a good exercise in statistical modelling and data visualisation in R.</p>
+          <div class="mono text-xs text-zinc-400 mt-2">R · Statistics · Data Visualisation</div>
+        </div>
+      </div>
+      <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
+        <div class="mono text-xs text-zinc-500">2023 —<br>present</div>
+        <div>
+          <h3 class="font-medium text-zinc-900 mb-1">
+            Advent of Code
+            <a href="https://github.com/evucelic/AOC25" target="_blank" rel="noopener noreferrer" class="ml-2 mono text-xs font-normal text-zinc-400 border-b border-zinc-300 hover:text-zinc-700 hover:border-zinc-700 transition-colors">↗ 2025</a>
+            <a href="https://github.com/evucelic/AOC24" target="_blank" rel="noopener noreferrer" class="ml-2 mono text-xs font-normal text-zinc-400 border-b border-zinc-300 hover:text-zinc-700 hover:border-zinc-700 transition-colors">↗ 2024</a>
+            <a href="https://github.com/evucelic/AOC23" target="_blank" rel="noopener noreferrer" class="ml-2 mono text-xs font-normal text-zinc-400 border-b border-zinc-300 hover:text-zinc-700 hover:border-zinc-700 transition-colors">↗ 2023</a>
+          </h3>
+          <p class="text-sm text-zinc-600 leading-relaxed">Three years of Advent of Code solutions in Python. Fun with friends!</p>
+          <div class="mono text-xs text-zinc-400 mt-2">Python · Algorithms</div>
+        </div>
+      </div>
+      <div class="border-t border-zinc-200 py-4">
+        <a href="https://github.com/evucelic" target="_blank" rel="noopener noreferrer" class="mono text-xs text-zinc-400 hover:text-zinc-700 transition-colors border-b border-zinc-300 hover:border-zinc-700">↗ view all repos on github.com/evucelic</a>
       </div>
     `
   };
+
+  const allFiles = Object.keys(fileContents);
+  const allCommands = ['help', 'ls', 'cat', 'clear', 'whoami'];
 
   function printTerm(text, styleClass = 'text-zinc-300') {
     const line = document.createElement('div');
@@ -118,6 +199,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   termInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      const parts = termInput.value.split(' ');
+      const last = parts[parts.length - 1];
+      if (parts.length === 1) {
+        const match = allCommands.find(c => c.startsWith(last));
+        if (match) termInput.value = match;
+      } else {
+        const match = allFiles.find(f => f.startsWith(last));
+        if (match) { parts[parts.length - 1] = match; termInput.value = parts.join(' '); }
+      }
+      return;
+    }
+
     if (e.key === 'ArrowUp') {
       e.preventDefault();
       if (historyIndex < history.length - 1) {
