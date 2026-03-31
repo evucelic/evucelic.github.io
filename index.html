@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eugen Vucelić </title>
+  <title>Eugen Vucelić</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,41 +17,41 @@
     #terminal-output { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
-<body class="bg-zinc-50 text-zinc-900 antialiased p-4 md:p-8">
+<body class="bg-zinc-50 text-zinc-900 antialiased p-4 md:p-8 md:py-12">
 
-  <main class="max-w-4xl mx-auto border border-zinc-300 bg-white">    
-    <header class="border-b border-zinc-300 p-6 md:p-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+  <main class="max-w-5xl mx-auto border border-zinc-300 bg-white shadow-sm">    
+    <header class="border-b border-zinc-300 p-8 md:p-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
       <div>
-        <h1 class="text-2xl font-medium tracking-tight">Eugen Vucelić</h1>
-        <p class="mono text-xs text-zinc-500 mt-2 uppercase">Data Science Student @ FER</p>
+        <h1 class="text-3xl font-medium tracking-tight">Eugen Vucelić</h1>
+        <p class="mono text-xs text-zinc-500 mt-3 uppercase tracking-wider">Data Science Student @ FER</p>
       </div>
-      <div class="mono text-xs text-zinc-500 md:text-right space-y-1">
+      <div class="mono text-xs text-zinc-500 md:text-right space-y-1.5">
         <p>LOC: Zagreb, HR</p>
         <p>UPDATED: March 2026</p>
       </div>
     </header>
 
-    <div class="p-6 md:p-10">
+    <div class="p-8 md:p-12">
       
-      <section class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4 mb-16">
-        <div class="mono text-xs text-zinc-400 pt-1">
+      <section class="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-6 md:gap-12 mb-20">
+        <div class="mono text-xs text-zinc-400 pt-1 tracking-wider">
           [01] OVERVIEW
         </div>
-        <div class="text-base leading-relaxed text-zinc-800 max-w-2xl">
-            Hi there, I am a data science student studying at the Faculty of Electrical Engineering and Computing in Zagreb, one of the top universities in the country.
-            I am passionate about all things data related and full stack development to bring the data to life. All throughout my studies, I have been doing various things on the side, from projects to work experiences and volunteering, so take a look by using the terminal below!
+        <div class="text-lg leading-relaxed text-zinc-800">
+          Hi there, I am a data science student studying at the Faculty of Electrical Engineering and Computing in Zagreb, one of the top universities in the country. I am passionate about all things data related and full stack development to bring the data to life. All throughout my studies, I have been doing various things on the side, from projects to work experiences and volunteering, so take a look by using the terminal below!
+        </div>
       </section>
 
-      <section class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4 mb-16">
-        <div class="mono text-xs text-zinc-400 pt-1">
+      <section class="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-6 md:gap-12 mb-20">
+        <div class="mono text-xs text-zinc-400 pt-1 tracking-wider">
           [02] TERMINAL
         </div>
         
         <div class="w-full">
-          <div class="bg-zinc-950 text-zinc-300 p-5 font-mono text-sm leading-relaxed overflow-hidden h-[300px] flex flex-col cursor-text" onclick="document.getElementById('term-input').focus()">
+          <div class="bg-zinc-950 text-zinc-300 p-6 rounded-sm font-mono text-sm md:text-base leading-relaxed overflow-hidden h-[360px] flex flex-col cursor-text shadow-inner" onclick="document.getElementById('term-input').focus()">
             
-            <div id="terminal-output" class="flex-grow overflow-y-auto space-y-1 mb-2">
-              <div class="text-zinc-500 mb-2">Last login: <span id="login-time"></span> on ttys000</div>
+            <div id="terminal-output" class="flex-grow overflow-y-auto space-y-1.5 mb-3">
+              <div class="text-zinc-500 mb-3">Last login: <span id="login-time"></span> on ttys000</div>
               <div><span class="text-emerald-500">eugen@portfolio</span><span class="text-zinc-500">:~</span>$ Type 'help' to see available commands.</div>
             </div>
 
@@ -61,35 +61,35 @@
             </div>
 
           </div>
-          <div class="mono text-[10px] text-zinc-400 mt-2">
+          <div class="mono text-[11px] text-zinc-400 mt-3 uppercase tracking-wide">
             HINT: Try typing "ls" then "cat experience.md"
           </div>
         </div>
       </section>
 
-      <section class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4 mb-16">
-        <div class="mono text-xs text-zinc-400 pt-1">
+      <section class="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-6 md:gap-12 mb-20">
+        <div class="mono text-xs text-zinc-400 pt-1 tracking-wider">
           [03] OUTPUT
         </div>
         
-        <div id="log-content" class="w-full text-zinc-500 text-sm">
-          // Awaiting terminal command... (e.g., cat projects.md)
+        <div id="log-content" class="w-full text-zinc-800 text-base">
+          <span class="text-zinc-400 italic font-mono text-sm">// Awaiting terminal command... (e.g., cat projects.md)</span>
         </div>
       </section>
 
-      <section class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4">
-        <div class="mono text-xs text-zinc-400 pt-1">
+      <section class="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-6 md:gap-12">
+        <div class="mono text-xs text-zinc-400 pt-1 tracking-wider">
           [04] REFS
         </div>
-        <div class="flex flex-col gap-2">
-          <a href="https://github.com/evucelic" class="text-sm text-zinc-800 hover:text-blue-600 transition-colors w-fit border-b border-transparent hover:border-blue-600">
-            My github!
+        <div class="flex flex-col gap-3">
+          <a href="https://github.com/evucelic" target="_blank" rel="noopener noreferrer" class="text-base font-medium text-zinc-800 hover:text-emerald-600 transition-colors w-fit border-b border-zinc-200 hover:border-emerald-600 pb-0.5">
+            GitHub ↗
           </a>
-          <a href="https://linkedin.com/in/eugen-vuceli%C4%87-b23709284/" class="text-sm text-zinc-800 hover:text-blue-600 transition-colors w-fit border-b border-transparent hover:border-blue-600">
-            My linkedin!
+          <a href="https://linkedin.com/in/eugen-vuceli%C4%87-b23709284/" target="_blank" rel="noopener noreferrer" class="text-base font-medium text-zinc-800 hover:text-emerald-600 transition-colors w-fit border-b border-zinc-200 hover:border-emerald-600 pb-0.5">
+            LinkedIn ↗
           </a>
-          <a href="mailto:vuceliceugen@gmail.com" class="text-sm text-zinc-800 hover:text-blue-600 transition-colors w-fit border-b border-transparent hover:border-blue-600">
-            Write me a mail!
+          <a href="mailto:vuceliceugen@gmail.com" class="text-base font-medium text-zinc-800 hover:text-emerald-600 transition-colors w-fit border-b border-zinc-200 hover:border-emerald-600 pb-0.5">
+            Email ↗
           </a>
         </div>
       </section>

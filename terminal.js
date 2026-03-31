@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let history = [];
   let historyIndex = -1;
+  let isTrainRunning = false;
 
   const fileContents = {
     'education.md': `
@@ -188,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const allFiles = Object.keys(fileContents);
-  const allCommands = ['help', 'ls', 'cat', 'clear', 'whoami'];
+  const allCommands = ['help', 'ls', 'cat', 'clear', 'whoami', 'sl'];
 
   function printTerm(text, styleClass = 'text-zinc-300') {
     const line = document.createElement('div');
@@ -196,6 +197,70 @@ document.addEventListener('DOMContentLoaded', () => {
     line.innerHTML = text;
     termOutput.appendChild(line);
     termOutput.scrollTop = termOutput.scrollHeight;
+  }
+
+  function runTrain() {
+    if (isTrainRunning) return;
+    isTrainRunning = true;
+    termInput.disabled = true;
+
+    const wheels = [
+      "__/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__|\n |/-=|___|=    ||    ||    ||    |_____/~\\___/        \n  \\_/      \\_O=====O=====O=====O/      \\_/            ",
+      "__/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__|\n |/-=|___|=    ||    ||    ||    |_____/~\\___/        \n  \\_/      \\_O=====O=====O=====O/      \\_/            ",
+      "__/ =| o |=-~\\ \\ /~\\ \\ /~\\ \\ /~\\ \\____Y___________|__|\n |/-=|___|=   | |   | |   | |   | |____/~\\___/        \n  \\_/      \\_O=====O=====O=====O/      \\_/            ",
+      "__/ =| o |=-~\\ \\ /~\\ \\ /~\\ \\ /~\\ \\____Y___________|__|\n |/-=|___|=   | |   | |   | |   | |____/~\\___/        \n  \\_/      \\_O=====O=====O=====O/      \\_/            ",
+      "__/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__|\n |/-=|___|=   ||    ||    ||    | |____/~\\___/        \n  \\_/      \\__O=====O=====O=====O/     \\_/            ",
+      "__/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__|\n |/-=|___|=   ||    ||    ||    | |____/~\\___/        \n  \\_/      \\__O=====O=====O=====O/     \\_/            "
+    ];
+
+    const body = "      ====        ________                ___________ \n  _D _|  |_______/        \\__I_I_____===__|_________| \n   |(_)---  |   H\\________/ |   |        =|___ ___|   \n   /     |  |   H  |  |     |   |         ||_| |_||   \n  |      |  |   H  |__--------------------| [___] |   \n  | ________|___H__/__|_____/[][]~\\_______|       |   \n  |/ |   |-----------I_____I [][] []  D   |=======|___\n";
+
+    const smoke = [
+      "                 (  ) (@@) ( )  (@)  ()    @@    O     @     O     @      O",
+      "            (@@@) (@@@@) (@@)  (@@)  (@)    ( )    O     @     O     @      O",
+      "       (@@@)  (@@@@) (@@@@) (@@)  (@@)  (@)    ( )    O     @     O     @      O",
+      "  (@@@@) (@@@@)  (@@@@) (@@)  (@@)  (@)    ( )    O     @     O     @      O",
+      " (@@@@) (@@@@)  (@@@@) (@@)  (@@)  (@)    ( )    O     @     O     @      O",
+      "(@@@@) (@@@@)  (@@@@) (@@)  (@@)  (@)    ( )    O     @     O     @      O"
+    ];
+
+    const trainContainer = document.createElement('div');
+    trainContainer.className = 'text-zinc-500 text-[10px] md:text-xs font-bold mono whitespace-pre overflow-hidden my-4';
+    trainContainer.style.position = 'relative';
+    trainContainer.style.height = '140px';
+    trainContainer.style.width = '100%';
+    termOutput.appendChild(trainContainer);
+    termOutput.scrollTop = termOutput.scrollHeight;
+
+    const trainElem = document.createElement('div');
+    trainElem.style.position = 'absolute';
+    trainElem.style.right = '-800px'; 
+    trainElem.style.lineHeight = '1.1';
+    trainContainer.appendChild(trainElem);
+
+    let pos = -800;
+    let frame = 0;
+    
+    const interval = setInterval(() => {
+      pos += 15; 
+      trainElem.style.right = pos + 'px';
+      
+      const s = smoke[frame % 6];
+      const w = wheels[frame % 6];
+      trainElem.textContent = s + "\n" + body + w;
+      
+      frame++;
+      
+      termOutput.scrollTop = termOutput.scrollHeight;
+
+      if (pos > termOutput.clientWidth + 200) {
+        clearInterval(interval);
+        trainContainer.remove();
+        isTrainRunning = false;
+        termInput.disabled = false;
+        termInput.focus();
+      }
+    }, 45);
   }
 
   termInput.addEventListener('keydown', function(e) {
@@ -233,6 +298,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (e.key === 'Enter') {
+      if (isTrainRunning) return;
+
       const rawCmd = termInput.value.trim();
       const args = rawCmd.split(' ').filter(Boolean);
 
@@ -261,6 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
           printTerm('&nbsp;&nbsp;<span class="text-blue-400">cat</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display file content (e.g., cat experience.md)');
           printTerm('&nbsp;&nbsp;<span class="text-blue-400">clear</span>&nbsp;&nbsp;&nbsp;&nbsp;Clear terminal window');
           printTerm('&nbsp;&nbsp;<span class="text-blue-400">whoami</span>&nbsp;&nbsp;&nbsp;Print user information');
+          printTerm('&nbsp;&nbsp;<span class="text-blue-400">sl</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Steam locomotive');
           break;
 
         case 'ls':
@@ -283,7 +351,11 @@ document.addEventListener('DOMContentLoaded', () => {
           break;
 
         case 'whoami':
-          printTerm('eugen_vucelic — Data Science Grad Student @ FER, ML/Full Stack Intern @ Vicuna');
+          printTerm('eugen_vucelic - Data Science Grad Student @ FER, ML/Full Stack Intern @ Vicuna');
+          break;
+
+        case 'sl':
+          runTrain();
           break;
 
         case 'clear':
