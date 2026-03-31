@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eugen Vucelić - Index</title>
+  <title>Eugen Vucelić </title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,9 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
     .mono { font-family: 'JetBrains Mono', monospace; }
+    
+    #terminal-output::-webkit-scrollbar { display: none; }
+    #terminal-output { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
 <body class="bg-zinc-50 text-zinc-900 antialiased p-4 md:p-8">
@@ -36,27 +39,53 @@
         </div>
         <div class="text-base leading-relaxed text-zinc-800 max-w-2xl">
             Hi there, I am a data science student studying at the Faculty of Electrical Engineering and Computing in Zagreb, one of the top universities in the country.
-            I am passionate about all things data related and full stack development to bring the data to life. All throughout my studies, I have been doing various things on the side, from projects to work experiences, so take a look below!
+            I am passionate about all things data related and full stack development to bring the data to life. All throughout my studies, I have been doing various things on the side, from projects to work experiences and volunteering, so take a look by using the terminal below!
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4 mb-16">
+        <div class="mono text-xs text-zinc-400 pt-1">
+          [02] TERMINAL
+        </div>
+        
+        <div class="w-full">
+          <div class="bg-zinc-950 text-zinc-300 p-5 font-mono text-sm leading-relaxed overflow-hidden h-[300px] flex flex-col cursor-text" onclick="document.getElementById('term-input').focus()">
+            
+            <div id="terminal-output" class="flex-grow overflow-y-auto space-y-1 mb-2">
+              <div class="text-zinc-500 mb-2">Last login: <span id="login-time"></span> on ttys000</div>
+              <div><span class="text-emerald-500">eugen@portfolio</span><span class="text-zinc-500">:~</span>$ Type 'help' to see available commands.</div>
+            </div>
+
+            <div class="flex items-center gap-2 shrink-0">
+              <span class="text-emerald-500">eugen@portfolio</span><span class="text-zinc-500">:~</span>$
+              <input type="text" id="term-input" class="bg-transparent border-none outline-none text-zinc-100 flex-grow w-full focus:ring-0" spellcheck="false" autocomplete="off" autofocus>
+            </div>
+
+          </div>
+          <div class="mono text-[10px] text-zinc-400 mt-2">
+            HINT: Try typing "ls" then "cat experience.md"
+          </div>
         </div>
       </section>
 
       <section class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4 mb-16">
         <div class="mono text-xs text-zinc-400 pt-1">
-          [02] LOG
+          [03] OUTPUT
         </div>
         
-        
+        <div id="log-content" class="w-full text-zinc-500 text-sm">
+          // Awaiting terminal command... (e.g., cat projects.md)
+        </div>
       </section>
 
       <section class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4">
         <div class="mono text-xs text-zinc-400 pt-1">
-          [03] REFS
+          [04] REFS
         </div>
         <div class="flex flex-col gap-2">
           <a href="https://github.com/evucelic" class="text-sm text-zinc-800 hover:text-blue-600 transition-colors w-fit border-b border-transparent hover:border-blue-600">
             My github!
           </a>
-          <a href="https://linkedin.com/in/eugen-vuceli\%C4\%87-b23709284/" class="text-sm text-zinc-800 hover:text-blue-600 transition-colors w-fit border-b border-transparent hover:border-blue-600">
+          <a href="https://linkedin.com/in/eugen-vuceli%C4%87-b23709284/" class="text-sm text-zinc-800 hover:text-blue-600 transition-colors w-fit border-b border-transparent hover:border-blue-600">
             My linkedin!
           </a>
           <a href="mailto:vuceliceugen@gmail.com" class="text-sm text-zinc-800 hover:text-blue-600 transition-colors w-fit border-b border-transparent hover:border-blue-600">
@@ -68,5 +97,6 @@
     </div>
   </main>
 
+  <script src="terminal.js" defer></script>
 </body>
 </html>
