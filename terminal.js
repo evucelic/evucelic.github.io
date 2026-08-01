@@ -35,10 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
     `,
     'experience.md': `
       <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
-        <div class="mono text-xs text-zinc-500">Nov 2025 -<br>present</div>
+        <div class="mono text-xs text-zinc-500">Jul 2026 -<br>present</div>
+        <div>
+          <h3 class="font-medium text-zinc-900 mb-1">Infobip - AI Research Intern</h3>
+          <p class="text-sm text-zinc-600 leading-relaxed">Working on applied AI research, exploring and prototyping approaches around agents and agentic systems</p>
+        </div>
+      </div>
+      <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
+        <div class="mono text-xs text-zinc-500">Nov 2025 -<br>Jun 2026</div>
         <div>
           <h3 class="font-medium text-zinc-900 mb-1">Vicuna - ML & Full Stack Developer</h3>
-          <p class="text-sm text-zinc-600 leading-relaxed">Working on real-time crypto data systems, internal dashboards, and ML experiments around trading signals. Most of the work sits somewhere between data engineering, backend development, and applied machine learning.</p>
+          <p class="text-sm text-zinc-600 leading-relaxed">Worked on real-time crypto data systems, internal dashboards, and ML experiments around trading signals. Most of the work sat somewhere between data engineering, backend development, and applied machine learning.</p>
         </div>
       </div>
       <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
@@ -96,6 +103,28 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `,
     'projects.md': `
+      <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
+        <div class="mono text-xs text-zinc-500">2026</div>
+        <div>
+          <h3 class="font-medium text-zinc-900 mb-1">
+            ankiautomate
+            <a href="https://github.com/evucelic/ankiautomate" target="_blank" rel="noopener noreferrer" class="ml-2 mono text-xs font-normal text-zinc-400 border-b border-zinc-300 hover:text-zinc-700 hover:border-zinc-700 transition-colors">↗ github</a>
+          </h3>
+          <p class="text-sm text-zinc-600 leading-relaxed">Working on making a small UI app to speed up creating Japanese vocabulary Anki cards with a lot of fields, I got really tired of entering all of my fields manually...</p>
+          <div class="mono text-xs text-zinc-400 mt-2">Python · UI Tooling</div>
+        </div>
+      </div>
+      <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
+        <div class="mono text-xs text-zinc-500">2026</div>
+        <div>
+          <h3 class="font-medium text-zinc-900 mb-1">
+            Buy Signal
+            <a href="https://github.com/evucelic/buy-signal" target="_blank" rel="noopener noreferrer" class="ml-2 mono text-xs font-normal text-zinc-400 border-b border-zinc-300 hover:text-zinc-700 hover:border-zinc-700 transition-colors">↗ github</a>
+          </h3>
+          <p class="text-sm text-zinc-600 leading-relaxed">A Telegram bot that tracks a buy signal for the US market by watching VIX, Fed rate outlook, FINRA margin debt trend, leading sectors, and broader market moves. Rule based system, informative only.</p>
+          <div class="mono text-xs text-zinc-400 mt-2">Python · Telegram Bot · Web Scraping</div>
+        </div>
+      </div>
       <div class="border-t border-zinc-200 py-4 grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-4">
         <div class="mono text-xs text-zinc-500">2025 -<br>present</div>
         <div>
@@ -343,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
           break;
 
         case 'whoami':
-          printTerm('eugen_vucelic - Data Science Student @ FER');
+          printTerm('eugen_vucelic - AI Research Intern @ Infobip | Data Science Student @ FER');
           break;
 
         case 'sl':
